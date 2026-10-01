@@ -4,8 +4,8 @@ services:
     build: ./mern-demo/server
     ports:
       - "5000:5000"
-    environment:
-      - MONGODB_URI=mongodb+srv://cloud_lab:mh7NQ5Fs_sxuqJs@tinh.odhnfb2.mongodb.net/cloud_lab?appName=Tinh
+    env_file:
+      - ./mern-demo/env
   frontend:
     build: ./mern-demo/client
     ports:

@@ -65,7 +65,7 @@ function App() {
 
   return (
     <div style={{ maxWidth: 800, margin: '20px auto', fontFamily: 'sans-serif' }}>
-      <h2>Quản lý Sinh viên</h2>
+     <h1>QUẢN LÝ SINH VIÊN - PHIÊN BẢN 2.0</h1>
 
       {/* Form nhập liệu */}
       <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '8px', marginBottom: 20 }}>

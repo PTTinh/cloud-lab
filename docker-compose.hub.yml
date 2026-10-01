@@ -5,13 +5,12 @@ services:
     image: phamtrongtinh/mern-backend:1.0
     ports:
       - "5000:5000"
-    environment:
-      - PORT=5000
-      - MONGODB_URI=mongodb+srv://cloud_lab:mh7NQ5Fs_sxuqJs@tinh.odhnfb2.mongodb.net/cloud_lab?appName=Tinh
+    env_file:
+      - ./mern-demo/env
     restart: always
 
   frontend:
-    image: phamtrongtinh/mern-frontend:1.0
+    image: phamtrongtinh/mern-frontend:2.0
     ports:
       - "3000:3000"
     depends_on:
