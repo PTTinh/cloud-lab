@@ -5,7 +5,7 @@ services:
     ports:
       - "5000:5000"
     env_file:
-      - ./mern-demo/env
+      - ./mern-demo/.env
   frontend:
     build: ./mern-demo/client
     ports:
