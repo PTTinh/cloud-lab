@@ -84,6 +84,17 @@ app.delete('/api/students/:id', async (req, res) => {
   }
 });
 
+const healthHandler = (req, res) => {
+  res.status(200).json({
+    status: 'UP',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+  });
+};
+
+app.get('/health', healthHandler);
+app.get('/api/health', healthHandler);
+
 // Khởi động Server (chỉ gọi duy nhất 1 lần ở cuối file)
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

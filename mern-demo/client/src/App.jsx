@@ -6,7 +6,7 @@ function App() {
   const [editingId, setEditingId] = useState(null);
 
 
-const API_URL = '/api/students';
+  const API_URL = '/api/students';
 
   // Câu 47: Lấy danh sách sinh viên
   const fetchStudents = async () => {
@@ -65,8 +65,11 @@ const API_URL = '/api/students';
   };
 
   return (
-    <div style={{ maxWidth: 800, margin: '20px auto', fontFamily: 'sans-serif' }}>
-     <h3>QUẢN LÝ SINH VIÊN - PHIÊN BẢN 2.0</h3>
+    <div style={{ maxWidthf: 800, margin: '20px auto', fontFamily: 'sans-serif' }}>
+      <header>
+        <h1>Quản lý sinh viên</h1>
+        <p>Phiên bản 2.0 - Production Cloud PaaS (Auto-Deployed)</p>
+      </header>
 
       {/* Form nhập liệu */}
       <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '8px', marginBottom: 20 }}>
